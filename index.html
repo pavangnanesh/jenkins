@@ -7,15 +7,21 @@
             border: 1px solid black;
             }
     </style>
+    </head>
+    <body>
     <header>
         <h1>Canvas Example</h1>
         <p>Draw on the canvas by clicking and dragging the mouse</p>
+        dragging the mouse</p>
     </header>
     <article>
         <h2>Canvas</h2>
         <canvas id="myCanvas" width="400" height="400" 
-        onmousedown="startDrawing(event)" onmousemove="drawLine(event)" 
-        onmouseup="stopDrawing(event)"></canvas>
+    height="400"
+        onmousedown="startDrawing(event)" 
+    onmousemove="drawLine(event)" 
+        onmouseup="stopDrawing(event)">
+        </canvas>
     </article>
 <script>
     var canvas = document.getElementById("myCanvas");
@@ -28,17 +34,17 @@
         ctx.beginPath();
         ctx.moveTo(x, y);
     }
-    function drawLine(event) {
-        if (isDrawing) {
-        var x = event.clientX - canvas.offsetLeft;
-        var y = event.clientY - canvas.offsetTop;
-        ctx.lineTo(x, y);
-        ctx.stroke();
-    }
-    }
     function stopDrawing(event) {
+        if(isDrawing){
+            var x=event.clintX-canvas.offsetLeft;
+            var y=event.clintY-canvas.offsetTop;
+            ctx.lineTo(x,y);
+            ctx.stroke();
+        }
+    } 
+    function stopDrawing(event){
         isDrawing = false;
-    }
+    
 }
 </script>
 </body>
