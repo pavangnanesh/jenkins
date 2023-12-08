@@ -28,7 +28,7 @@
     var ctx = canvas.getContext("2d");
     var isDrawing = false;
     function startDrawing(event) {
-        isDrawing = true;
+        isDrawing=true;
         var x = event.clientX - canvas.offsetLeft;
         var y = event.clientY - canvas.offsetTop;
         ctx.beginPath();
@@ -36,14 +36,14 @@
     }
     function stopDrawing(event) {
         if(isDrawing){
-            var x=event.clintX-canvas.offsetLeft;
-            var y=event.clintY-canvas.offsetTop;
+            var x=event.clientX-canvas.offsetLeft;
+            var y=event.clientY-canvas.offsetTop;
             ctx.lineTo(x,y);
             ctx.stroke();
         }
     } 
     function stopDrawing(event){
-        isDrawing = false;
+        isDrawing =false;
     
 }
 </script>
