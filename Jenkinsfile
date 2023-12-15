@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Using the Jenkins workspace variable to reference files
-                    bat 'xcopy /y 'C:\\Users\P.PAVAN GNANESH\OneDrive\Desktop\Nginx\nginx-1.24.0\empty''
+                    bat 'xcopy /y 'C:\\Users\\P.PAVAN GNANESH\\OneDrive\\Desktop\\Nginx\\nginx-1.24.0\\empty''
                 }
             }
         }
