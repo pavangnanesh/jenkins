@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Using the Jenkins workspace variable to reference files
-                    bat "C:\\Users\\P.PAVAN GNANESH\\OneDrive\\Desktop\\subbadu1" '
+                    bat ' "C:\\Users\\P.PAVAN GNANESH\\OneDrive\\Desktop\\subbadu1" '
                 }
             }
         }
